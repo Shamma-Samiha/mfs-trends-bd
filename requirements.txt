@@ -1,0 +1,10 @@
+pandas
+numpy
+plotly
+statsmodels
+streamlit
+requests
+beautifulsoup4
+pdfplumber
+pytest
+lxml
