@@ -106,34 +106,8 @@ python -m venv .venv
 pip install -r requirements.txt
 streamlit run app\streamlit_app.py
 
-## 📐 Methodology
 
-- **Source:** Bangladesh Bank — Mobile Financial Services (MFS) monthly comparative statements (HTML/PDF).
-- **Ingestion:** 
-  - Try HTML tables first (`pandas.read_html` with `lxml`), 
-  - fall back to the latest MFS PDF (`pdfplumber`), 
-  - final fallback is a small **sample dataset** so the app always runs.
-- **Cleaning (ETL):**
-  - Normalize headers (handle `None` / “Unnamed” columns).
-  - Reshape wide sheets to **long** format where needed.
-  - Parse dates to pandas `datetime` (month start).
-  - Convert **crore BDT → BDT** by multiplying **× 1e7**.
-  - Keep standard categories: Cash In/Out, P2P, Merchant Payment, Utility Bill Payment (P2B), Government Payment, Salary Disbursement (B2P), Others.
-- **KPIs:**
-  - **MoM** = (current − previous month) / previous month.
-  - **YoY** = (current − same month last year) / same month last year.
-  - **Anomalies:** STL decomposition (statsmodels); flag residuals with |z| > 2.
-- **Visualization:**
-  - Amounts by category (line; auto-bar if only one month).
-  - Growth lines (MoM/YoY) + YoY heatmap (when ≥ 13 months).
-  - Donut for latest month mix + stacked area (share over time).
-- **Export:** Download cleaned monthly CSV for audit/replication.
-## 🙌 Acknowledgments
-
-- **Bangladesh Bank** for publishing MFS statistics.
-- **Streamlit**, **pandas**, **plotly**, **statsmodels**, **BeautifulSoup**, **lxml**, **pdfplumber** — the open-source tools powering this project.
-- The broader Python community for documentation, examples, and packages that make data apps fast to build.
-## 📫 Contact
+📫 Contact
 
 - Author: **<Shamma Samiha>**
 - LinkedIn: <https://www.linkedin.com/in/shamma-samiha-4b029b246/>
