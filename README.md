@@ -94,7 +94,11 @@ mfs-trends-bd/
 └─ assets/ # screenshots (not required but recommended)
 
 ---
-
+📫 Contact
+- LinkedIn: <https://www.linkedin.com/in/shamma-samiha-4b029b246/>
+- GitHub: <https://github.com/Shamma-Samiha>
+- Email: <shmmsamiha@gmail.com>
+  
 ## ⚡ Quickstart (Local)
 
 > Use a virtual environment; run these **from the project root**.
@@ -107,11 +111,6 @@ pip install -r requirements.txt
 streamlit run app\streamlit_app.py
 
 
-📫 Contact
 
-- Author: **<Shamma Samiha>**
-- LinkedIn: <https://www.linkedin.com/in/shamma-samiha-4b029b246/>
-- GitHub: <https://github.com/Shamma-Samiha>
-- Email: <shmmsamiha@gmail.com>
 
 
